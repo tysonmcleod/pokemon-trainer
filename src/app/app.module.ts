@@ -4,10 +4,16 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { LandingPageComponent } from './components/pages/landing-page/landing-page.component';
+import { TrainerPageComponent } from './components/pages/trainer-page/trainer-page.component';
+import { CataloguePageComponent } from './components/pages/catalogue-page/catalogue-page.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    LandingPageComponent,
+    TrainerPageComponent,
+    CataloguePageComponent
   ],
   imports: [
     BrowserModule,
