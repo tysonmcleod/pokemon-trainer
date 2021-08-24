@@ -30,10 +30,12 @@ export class CataloguePageComponent implements OnInit {
     return false;
   }
 
-  catchPokemon(name:string): void {
-    if(localStorage.getItem("caughtPokemon")){
-      localStorage.setItem('caughtPokemon', localStorage.getItem("caughtPokemon")+ ' ' + JSON.stringify(name))
-  }
+  catchPokemon(name:string, image_url:string): void {
+    if(!localStorage.getItem('caughtPokemon')){
+      localStorage.setItem('caughtPokemon', JSON.stringify(name) + ' ' + JSON.stringify(image_url) )
+    }else{
+      localStorage.setItem('caughtPokemon', localStorage.getItem("caughtPokemon")+ ' ' + JSON.stringify(name) + ' ' + JSON.stringify(image_url))
+    }
   }
 
 }

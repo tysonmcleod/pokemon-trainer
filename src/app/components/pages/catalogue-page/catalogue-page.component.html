@@ -12,7 +12,7 @@
         <ng-template #elseBlock>
             {{pokemon.data.name}}
             <img src="{{pokemon.image_url}}">
-            <button (click)="catchPokemon(pokemon.data.name)">Catch</button>
+            <button (click)="catchPokemon(pokemon.data.name, pokemon.image_url)">Catch</button>
         </ng-template>
     </div> 
 </div>
