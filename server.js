@@ -1,15 +1,15 @@
+//Install express server
 const express = require('express');
-const app = express();
 const path = require('path');
-const cors = require('cors');
 
-app.use(cors());
+const app = express();
+
+// Serve only the static files form the dist directory
 app.use(express.static('./dist/pokemon-trainer'));
 
-app.get('/*', function(req, res){
-    res.sendFile(path.join(__dirname, './../dist/pokemon-trainer/index.html'));
-    console.log('path', path.join(__dirname, './../dist/pokemon-trainer/index.html'))
-});
+app.get('/*', (req, res) =>
+    res.sendFile('index.html', {root: 'dist/pokemon-trainer/'}),
+);
 
+// Start the app by listening on the default Heroku port
 app.listen(process.env.PORT || 8080);
-

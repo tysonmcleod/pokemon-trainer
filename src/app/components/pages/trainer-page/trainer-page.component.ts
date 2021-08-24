@@ -10,6 +10,13 @@ export class TrainerPageComponent implements OnInit {
   public userPokemon: {name: string, image_url: string}[] = [];
   constructor(private router: Router) { }
 
+  /**
+   * A function used to get a user's caught
+   * pokemon. The function gets all the caught pokemon
+   * from the user's localstorage and creates an object 
+   * using the name and respective
+   * image url for usage in the trainer-page. 
+   */
   showPokemon(): void{
     if(localStorage.getItem('caughtPokemon')){
       let pokemonList = localStorage.getItem('caughtPokemon')?.split(" ");
