@@ -8,6 +8,7 @@ import { GetPokemonService } from 'src/app/services/get-pokemon.service';
   styleUrls: ['./catalogue-page.component.css']
 })
 export class CataloguePageComponent implements OnInit {
+  
 
   constructor(private router: Router, private getPokemon: GetPokemonService) { }
 
@@ -16,7 +17,6 @@ export class CataloguePageComponent implements OnInit {
       this.router.navigate(['/']);
     }
     this.getPokemon.getPokemonData();
-    console.log(localStorage.getItem('pokemon'))
   }
 
   get pokedex(): any[] {
@@ -24,7 +24,16 @@ export class CataloguePageComponent implements OnInit {
   }
   
   isCaught(name:string): boolean{
-    return true;
+    if(localStorage.getItem('caughtPokemon')?.includes(JSON.stringify(name))){
+      return true;
+    }
+    return false;
+  }
+
+  catchPokemon(name:string): void {
+    if(localStorage.getItem("caughtPokemon")){
+      localStorage.setItem('caughtPokemon', localStorage.getItem("caughtPokemon")+ ' ' + JSON.stringify(name))
+  }
   }
 
 }

@@ -1,17 +1,18 @@
 <h3>Pokedex</h3>
 
 <div *ngFor="let pokemon of pokedex">
-    <div *ngIf="isCaught(pokemon.data.name)">
-        {{pokemon.data.name}}
-        <img src="{{pokemon.image_url}}">
-        <p>HAS BEEN CAUGHT display pokeball</p>
+    <div>
+        <div *ngIf="isCaught(pokemon.data.name);else elseBlock">
+            {{pokemon.data.name}}
+            
+            <img src="{{pokemon.image_url}}">
+            <img src="../../../../assets/images/pokeball.png" style="width:30px;height:30px"> <!--change style to css later-->
+        </div>
+        
+        <ng-template #elseBlock>
+            {{pokemon.data.name}}
+            <img src="{{pokemon.image_url}}">
+            <button (click)="catchPokemon(pokemon.data.name)">Catch</button>
+        </ng-template>
     </div> 
-    
-    <!--
-    <div #notCaught>
-        {{pokemon.data.name}}
-        <img src="{{pokemon.image_url}}">
-        <button>Catch</button>
-    </div> 
-    -->
 </div>
