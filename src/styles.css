@@ -6,7 +6,13 @@ body {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  background: linear-gradient(#141e30, #243b55);
+  background-image: linear-gradient(to right, #6a11cb 0%, #2575fc 100%);
   color: aliceblue;
   font-family: "Inconsolata", monospace;
+  line-height: 1.4;
+}
+button {
+  border: none;
+  outline: none;
+  cursor: pointer;
 }

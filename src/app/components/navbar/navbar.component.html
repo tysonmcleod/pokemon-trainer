@@ -1,7 +1,27 @@
-<nav class="navbar navbar-light bg-light">
+<!-- <nav class="navbar navbar-light bg-light">
     <form class="container-fluid justify-content-start">
         <button (click)="viewPokedex()" class="btn btn-outline-success me-2" type="button">Pokedex</button>
         <button (click)="viewTrainerPage()" class="btn btn-outline-success me-2" type="button">Trainer</button>
         <button (click)="logOutUser()" class="btn btn-outline-success me-2" type="button">Log out</button>
     </form>
-  </nav>
+  </nav> -->
+
+
+<div class="menu-wrap">
+    <input type="checkbox" class="toggler">
+    <div class="hamburger">
+        <div></div>
+    </div>
+    <div class="menu">
+        <div>
+            <div>
+                <ul>
+                     <li><a (click)="viewPokedex()"  type="button" href="/catalogue">Pokedex</a></li>
+                    <li><a  (click)="viewTrainerPage()"  type="button" href="/trainer">Trainer</a></li>
+                    <li><a (click)="logOutUser()"  type="button" href="/">Logout</a></li>
+        
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>

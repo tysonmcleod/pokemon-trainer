@@ -1,3 +1,49 @@
-.catalogue-page{
-    margin-top: 60px;
+.showcase {
+  margin-top: 3rem;
+}
+.container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  grid-template-rows: repeat(2, max-content);
+  grid-gap: 2rem;
+}
+
+.header {
+  grid-column: 1/-1;
+  grid-row: 1;
+}
+.content-display {
+  border: 1px solid #fff;
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+  align-items: center;
+}
+
+.btn-grad {
+  background-image: linear-gradient(
+    to right,
+    #ff512f 0%,
+    #dd2476 51%,
+    #ff512f 100%
+  );
+}
+.btn-grad {
+  margin: 10px;
+  width: 11rem;
+  padding: 15px;
+  text-align: center;
+  text-transform: uppercase;
+  transition: 0.5s;
+  background-size: 200% auto;
+  color: white;
+  box-shadow: 0 0 20px #eee;
+  border-radius: 10px;
+  display: block;
+}
+
+.btn-grad:hover {
+  background-position: right center; /* change the direction of the change here */
+  color: #fff;
+  text-decoration: none;
 }

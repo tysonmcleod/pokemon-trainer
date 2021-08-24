@@ -1,14 +1,23 @@
-<app-navbar></app-navbar>
+
 <div class="container">
+   <app-navbar></app-navbar> 
     <div class="trainer-page">
         <h3>Welcome to your trainer page</h3>
-        <div>
-            <h4>Your pokemon</h4>
-            <div *ngFor ="let pokemon of userPokemon">
-                {{pokemon.name}}
-                <img src="{{pokemon.image_url}}">
+         <h4>Your pokemon List</h4>
+    
+         <div class="wrapper">
+      <div class="pokemen-list" *ngFor ="let pokemon of userPokemon">
+                <div class="content">
+                    <p>   {{pokemon.name}}     </p>
+                 
+                <img src="{{pokemon.image_url}}">   
+                </div>
+               
             </div>
-        </div>
+         </div>
+           
+      
+        
     </div>
 </div>
 

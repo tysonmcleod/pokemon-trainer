@@ -1,14 +1,20 @@
+<div class="main-wrapper">
+
+
+
 <app-navbar></app-navbar>
 
-<div class="container">
-    <div class="catalogue-page">
-        
-        <h3>Pokedex</h3>
-        <div *ngFor="let pokemon of pokedex">
-            <div>
+<div class="showcase">
+   
+    <div class="container showcase-inner">
+              <h1 class="header">Pokedex</h1>
+   
+        <div *ngFor="let pokemon of pokedex" class="content-display">
+           
+           
                 <div *ngIf="isCaught(pokemon.data.name);else elseBlock">
-                    {{pokemon.data.name}}
                     
+                    <p>  {{pokemon.data.name}} </p>
                     <img src="{{pokemon.image_url}}">
                     <img src="../../../../assets/images/pokeball.png" style="width:30px;height:30px"> <!--change style to css later-->
                 </div>
@@ -16,9 +22,10 @@
                 <ng-template #elseBlock>
                     {{pokemon.data.name}}
                     <img src="{{pokemon.image_url}}">
-                    <button (click)="catchPokemon(pokemon.data.name, pokemon.image_url)">Catch</button>
+                    <button class="btn-grad" (click)="catchPokemon(pokemon.data.name, pokemon.image_url)">Catch</button>
                 </ng-template>
-            </div> 
+           
         </div>
     </div>
+</div>
 </div>
