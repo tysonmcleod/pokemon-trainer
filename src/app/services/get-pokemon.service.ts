@@ -7,7 +7,7 @@ import { HttpClient } from '@angular/common/http';
 export class GetPokemonService {
   private BASE_URL = 'https://pokeapi.co/api/v2/';
   private ORIGINAL_POKEDEX_BASE_URL =
-    'https://pokeapi.co/api/v2/pokemon?limit=20';
+    'https://pokeapi.co/api/v2/pokemon?limit=50';
   // update this
   private SPRITE_URL =
     'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/';
