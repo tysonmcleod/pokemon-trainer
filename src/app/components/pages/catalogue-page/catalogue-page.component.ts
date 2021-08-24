@@ -15,10 +15,16 @@ export class CataloguePageComponent implements OnInit {
     if(!localStorage.getItem('name')){
       this.router.navigate(['/']);
     }
+    this.getPokemon.getPokemonData();
+    console.log(localStorage.getItem('pokemon'))
+  }
 
-    this.getPokemon.getPokemonData().subscribe(data => {
-      console.log(data);
-    });
+  get pokedex(): any[] {
+    return this.getPokemon.getPokedex();
   }
   
+  isCaught(name:string): boolean{
+    return true;
+  }
+
 }
