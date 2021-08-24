@@ -1,13 +1,16 @@
-<div class="trainer-page">
-    <h3>Welcome to your trainer page</h3>
-    <div>
-        <h4>Your pokemon</h4>
-        <div *ngFor ="let pokemon of userPokemon">
-            {{pokemon.name}}
-            <img src="{{pokemon.image_url}}">
+<app-navbar></app-navbar>
+<div class="container">
+    <div class="trainer-page">
+        <h3>Welcome to your trainer page</h3>
+        <div>
+            <h4>Your pokemon</h4>
+            <div *ngFor ="let pokemon of userPokemon">
+                {{pokemon.name}}
+                <img src="{{pokemon.image_url}}">
+            </div>
         </div>
     </div>
-    <button type="submit" (click)="logOutUser()">Log out</button>
 </div>
+
 
 

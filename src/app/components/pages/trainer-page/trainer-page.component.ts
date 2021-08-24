@@ -23,18 +23,12 @@ export class TrainerPageComponent implements OnInit {
     }
   }
 
-
   ngOnInit(): void {
     if(!localStorage.getItem('name')){
       this.router.navigate(['/']);
     }else{
       this.showPokemon();
     }
-  }
-
-  logOutUser(): void {
-    localStorage.clear();
-    this.router.navigate(['/']);
   }
 
 }
