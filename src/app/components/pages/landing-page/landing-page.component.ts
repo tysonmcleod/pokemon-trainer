@@ -11,6 +11,12 @@ export class LandingPageComponent implements OnInit {
 
   constructor(private router: Router) {}
 
+  /**
+   * This function is used to add a users name to the 
+   * localstorage. If the name is valid, a user is
+   * redirected to the home page. If not, an alert is shown.
+   * @param event 
+   */
   addName(event: any): void {
     event.preventDefault();
     if (
