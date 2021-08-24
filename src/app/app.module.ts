@@ -8,13 +8,15 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { LandingPageComponent } from './components/pages/landing-page/landing-page.component';
 import { TrainerPageComponent } from './components/pages/trainer-page/trainer-page.component';
 import { CataloguePageComponent } from './components/pages/catalogue-page/catalogue-page.component';
+import { NavbarComponent } from './components/navbar/navbar.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     LandingPageComponent,
     TrainerPageComponent,
-    CataloguePageComponent
+    CataloguePageComponent,
+    NavbarComponent
   ],
   imports: [
     BrowserModule,

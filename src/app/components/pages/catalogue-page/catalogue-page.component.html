@@ -1,18 +1,25 @@
-<h3>Pokedex</h3>
+<app-navbar></app-navbar>
 
-<div *ngFor="let pokemon of pokedex">
-    <div>
-        <div *ngIf="isCaught(pokemon.data.name);else elseBlock">
-            {{pokemon.data.name}}
-            
-            <img src="{{pokemon.image_url}}">
-            <img src="../../../../assets/images/pokeball.png" style="width:30px;height:30px"> <!--change style to css later-->
-        </div>
+<div class="container">
+    <div class="catalogue-page">
         
-        <ng-template #elseBlock>
-            {{pokemon.data.name}}
-            <img src="{{pokemon.image_url}}">
-            <button (click)="catchPokemon(pokemon.data.name, pokemon.image_url)">Catch</button>
-        </ng-template>
-    </div> 
+        <h3>Pokedex</h3>
+
+        <div *ngFor="let pokemon of pokedex">
+            <div>
+                <div *ngIf="isCaught(pokemon.data.name);else elseBlock">
+                    {{pokemon.data.name}}
+                    
+                    <img src="{{pokemon.image_url}}">
+                    <img src="../../../../assets/images/pokeball.png" style="width:30px;height:30px"> <!--change style to css later-->
+                </div>
+                
+                <ng-template #elseBlock>
+                    {{pokemon.data.name}}
+                    <img src="{{pokemon.image_url}}">
+                    <button (click)="catchPokemon(pokemon.data.name, pokemon.image_url)">Catch</button>
+                </ng-template>
+            </div> 
+        </div>
+    </div>
 </div>
