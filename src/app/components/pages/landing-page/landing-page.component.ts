@@ -11,6 +11,7 @@ export class LandingPageComponent implements OnInit {
   constructor(private router: Router) { }
 
   addName(event: any):void{
+    event.preventDefault();
     if(event.target.name.value!="" && event.target.name.value.match(/^[a-zA-Z-]+$/)){
       localStorage.setItem('name', event.target.name.value);
       this.router.navigate(['/trainer']);
