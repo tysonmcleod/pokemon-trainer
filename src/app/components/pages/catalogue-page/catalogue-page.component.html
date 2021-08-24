@@ -1,2 +1,17 @@
-<p>catalogue-page works!</p>
-  
+<h3>Pokedex</h3>
+
+<div *ngFor="let pokemon of pokedex">
+    <div *ngIf="isCaught(pokemon.data.name)">
+        {{pokemon.data.name}}
+        <img src="{{pokemon.image_url}}">
+        <p>HAS BEEN CAUGHT display pokeball</p>
+    </div> 
+    
+    <!--
+    <div #notCaught>
+        {{pokemon.data.name}}
+        <img src="{{pokemon.image_url}}">
+        <button>Catch</button>
+    </div> 
+    -->
+</div>
