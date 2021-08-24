@@ -6,7 +6,7 @@ import { HttpClient } from '@angular/common/http';
 })
 export class GetPokemonService {
   private BASE_URL = 'https://pokeapi.co/api/v2/';
-  private ORIGINAL_BASE_URL = 'https://pokeapi.co/api/v2/pokemon?limit=151';
+  private ORIGINAL_POKEDEX_BASE_URL = 'https://pokeapi.co/api/v2/pokemon?limit=151';
   // update this 
   private SPRITE_URL = 'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/';
   private pokedex: any[] = []; 
@@ -16,7 +16,7 @@ export class GetPokemonService {
   // fetch the 151 pokemon (original pokedex)
   // store in pokedex array 
   public getPokemonData(){
-    this.http.get<any>(this.ORIGINAL_BASE_URL).subscribe(
+    this.http.get<any>(this.ORIGINAL_POKEDEX_BASE_URL).subscribe(
       (response:any) => {
         console.log('success');
         this.pokedex.push(this.process(response.results));
