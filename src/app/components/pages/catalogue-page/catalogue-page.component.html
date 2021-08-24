@@ -4,7 +4,6 @@
     <div class="catalogue-page">
         
         <h3>Pokedex</h3>
-
         <div *ngFor="let pokemon of pokedex">
             <div>
                 <div *ngIf="isCaught(pokemon.data.name);else elseBlock">

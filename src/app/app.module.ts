@@ -13,10 +13,11 @@ import { NavbarComponent } from './components/navbar/navbar.component';
 @NgModule({
   declarations: [
     AppComponent,
+    NavbarComponent,
     LandingPageComponent,
     TrainerPageComponent,
-    CataloguePageComponent,
-    NavbarComponent
+    CataloguePageComponent
+    
   ],
   imports: [
     BrowserModule,
