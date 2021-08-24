@@ -7,6 +7,8 @@ import { Router } from '@angular/router';
   styleUrls: ['./landing-page.component.css'],
 })
 export class LandingPageComponent implements OnInit {
+  public caughtPokemon: string = 'pikachu';
+
   constructor(private router: Router) {}
 
   addName(event: any): void {
@@ -16,6 +18,7 @@ export class LandingPageComponent implements OnInit {
       event.target.name.value.match(/^[a-zA-Z-]+$/)
     ) {
       localStorage.setItem('name', event.target.name.value);
+      localStorage.setItem('caughtPokemon', JSON.stringify(this.caughtPokemon));
       this.router.navigate(['/catalogue']);
     } else {
       alert('Enter a valid name');
