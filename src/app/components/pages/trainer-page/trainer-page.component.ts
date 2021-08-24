@@ -7,6 +7,8 @@ import {Router} from '@angular/router';
   styleUrls: ['./trainer-page.component.css']
 })
 export class TrainerPageComponent implements OnInit {
+  
+  public caughtPokemon: string[] = [];
 
   constructor(private router: Router) { }
 
@@ -14,6 +16,12 @@ export class TrainerPageComponent implements OnInit {
     if(!localStorage.getItem('name')){
       this.router.navigate(['/']);
     }
+    localStorage.setItem('pokemon', JSON.stringify(this.caughtPokemon));
+  }
+
+  logOutUser(): void {
+    localStorage.clear();
+    this.router.navigate(['/']);
   }
 
 }
