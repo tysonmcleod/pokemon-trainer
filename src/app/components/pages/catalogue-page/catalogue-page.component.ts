@@ -28,3 +28,4 @@ export class CataloguePageComponent implements OnInit {
   }
 
 }
+
