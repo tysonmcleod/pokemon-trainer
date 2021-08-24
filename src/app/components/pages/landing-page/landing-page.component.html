@@ -1,7 +1,30 @@
-<div class="login-page">
+<!-- <div class="login-page">
     <h3>Please log in</h3>
     <form (submit)="addName($event)">
         <input type="text" name="name" id="name">
         <button type="submit">Enter</button>
     </form>
+</div>  -->
+
+<header class="header">
+    <h1>Pokémon Trainer</h1>
+</header>
+
+    <div class="login-box">
+    <h2>Login</h2>
+    <form (submit)="addName($event)">
+        <div class="user-box">
+            <input type="text" name="name" required="">
+            <label>Username</label>
+        </div>
+       
+        <button type="submit">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            Submit
+        </button>
+    </form>
 </div>
+
