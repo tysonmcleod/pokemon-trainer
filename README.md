@@ -1,6 +1,5 @@
 
-
-![image](https://user-images.githubusercontent.com/43278171/130740608-2a05ac29-2386-42e0-98ac-7f65f3453ba6.png) 
+<img src="https://user-images.githubusercontent.com/43278171/130740608-2a05ac29-2386-42e0-98ac-7f65f3453ba6.png" height="300" width="300">
 
 # Pokemon Trainer
 A Pokémon Trainer web app using the Angular Framework.
