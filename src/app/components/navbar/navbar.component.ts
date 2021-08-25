@@ -13,15 +13,25 @@ export class NavbarComponent implements OnInit {
   ngOnInit(): void {
   }
   
+  /**
+   * A function used to reroute to the 
+   * catalogue page.
+   */
   viewPokedex(): void{
     this.router.navigate(['/catalogue']);
   }
-
+  /**
+   * A function used to reroute to the 
+   * trainer page.
+   */
   viewTrainerPage(): void{
     this.router.navigate(['/trainer']);
   }
-
-  
+  /**
+   * A function used to log out the current
+   * user. It does so by clearing the localstorage
+   * and rerouting to the home page.
+   */
   logOutUser(): void {
     localStorage.clear();
     this.router.navigate(['/']);
