@@ -1,6 +1,9 @@
-# Pokemon Trainer
 
-This project was used to test the Angular Framework. 
+
+![image](https://user-images.githubusercontent.com/43278171/130740608-2a05ac29-2386-42e0-98ac-7f65f3453ba6.png) 
+
+# Pokemon Trainer
+A Pokémon Trainer web app using the Angular Framework.
 
 The project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 12.2.2.
 
